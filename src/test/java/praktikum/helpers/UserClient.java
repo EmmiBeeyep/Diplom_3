@@ -6,6 +6,9 @@ import io.restassured.response.Response;
 import praktikum.config.Config;
 
 import static io.restassured.RestAssured.given;
+import static praktikum.helpers.Endpoints.REGISTER;
+import static praktikum.helpers.Endpoints.USER;
+import static org.apache.http.HttpStatus.*;
 
 public class UserClient {
 
@@ -19,12 +22,12 @@ public class UserClient {
         Response response = given()
                 .header("Content-type", "application/json")
                 .body(user)
-                .post("api/auth/register");
+                .post(REGISTER);
 
-        response.then().statusCode(200);
+        response.then().statusCode(SC_OK);
 
         accessToken = response.body().path("accessToken");
-        //System.out.println(accessToken);
+
     }
 
     @Step("Удалить пользователя через api")
@@ -38,7 +41,7 @@ public class UserClient {
 
         given()
                 .header("Authorization", accessToken)
-                .delete("/api/auth/user");
+                .delete(USER);
     }
 
 }

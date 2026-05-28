@@ -1,5 +1,6 @@
 package praktikum.tests;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.After;
 import org.junit.Assert;
@@ -29,6 +30,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход по кнопке «Войти в аккаунт» на главной")
+    @Description("Проверка входа через кнопку «Войти в аккаунт на главной странице»")
     public void loginFromMainPageTest() {
 
         LoginPage loginPage = new LoginPage(driver);
@@ -43,6 +45,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход через кнопку «Личный кабинет»")
+    @Description("Проверка входа через кнопку «Личный кабинет» в шапке")
     public void loginFromPersonalAccountTest() {
 
         LoginPage loginPage = new LoginPage(driver);
@@ -57,6 +60,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход через кнопку в форме регистрации")
+    @Description("Проверка входа через кнопку «Уже зарегистрированы? - Войти» в форме регистрации")
     public void loginFromRegistrationFormTest() {
 
         LoginPage loginPage = new LoginPage(driver);
@@ -74,6 +78,7 @@ public class LoginTest extends BaseTest {
 
     @Test
     @DisplayName("Вход через кнопку в форме восстановления пароля")
+    @Description("Проверка входа через кнопку «Вспомнили пароль? - Войти» в форме восстановления пароля")
     public void loginFromRForgotPasswordTest() {
 
         LoginPage loginPage = new LoginPage(driver);

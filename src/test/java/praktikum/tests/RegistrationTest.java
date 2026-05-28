@@ -1,5 +1,6 @@
 package praktikum.tests;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Before;
@@ -22,6 +23,7 @@ public class RegistrationTest extends BaseTest {
 
     @Test
     @DisplayName("Успешная регистрация")
+    @Description("Проверка успешной регистрации пользователя с валидными данными")
     public void successfulRegistrationTest() {
 
         User user = UserGenerator.getRandomUser();
@@ -34,6 +36,7 @@ public class RegistrationTest extends BaseTest {
 
     @Test
     @DisplayName("Ошибка для некорректного пароля")
+    @Description("Проверка отображения ошибки при вводе пароля длиной менее 6 символов")
     public void incorrectPasswordTest() {
 
         User user = UserGenerator.getRandomUser();

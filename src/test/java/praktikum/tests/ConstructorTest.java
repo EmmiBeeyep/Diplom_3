@@ -1,5 +1,6 @@
 package praktikum.tests;
 
+import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,6 +9,7 @@ public class ConstructorTest extends BaseTest {
 
     @Test
     @DisplayName("Переход к разделу «Булки»")
+    @Description("Проверка перехода в раздел «Булки» конструктора")
     public void bunsTabTest() {
 
         mainPage.open();
@@ -21,6 +23,7 @@ public class ConstructorTest extends BaseTest {
 
     @Test
     @DisplayName("Переход к разделу «Соусы»")
+    @Description("Проверка перехода в раздел «Соусы» конструктора")
     public void saucesTabTest() {
 
         mainPage.open();
@@ -33,6 +36,7 @@ public class ConstructorTest extends BaseTest {
 
     @Test
     @DisplayName("Переход к разделу «Начинки»")
+    @Description("Проверка перехода в раздел «Начинки» конструктора")
     public void fillingsTabTest() {
 
         mainPage.open();
